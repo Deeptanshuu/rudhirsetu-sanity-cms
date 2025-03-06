@@ -30,8 +30,19 @@ export default {
       initialValue: true
     },
     {
+      name: 'shortDesc',
+      type: 'string'
+    },
+    {
       name: 'desc',
       type: 'text'
+    },
+    {
+      name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     }
   ]
 } 

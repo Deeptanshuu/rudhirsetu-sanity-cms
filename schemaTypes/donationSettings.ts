@@ -7,8 +7,33 @@ export default {
   __experimental_actions: ['update', 'publish'],
   fields: [
     {
+      name: 'isUpiEnabled',
+      type: 'boolean',
+      validation: (rule: Rule) => rule.required()
+    },
+    {
       name: 'upiId',
       type: 'string',
+      validation: (rule: Rule) => rule.required()
+    },
+    {
+      name: 'qrCodeImage',
+      type: 'image',
+      options: {
+        hotspot: true
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text'
+        }
+      ],
+      validation: (rule: Rule) => rule.required()
+    },
+    {
+      name: 'isBankEnabled',
+      type: 'boolean',
       validation: (rule: Rule) => rule.required()
     },
     {
@@ -29,21 +54,6 @@ export default {
     {
       name: 'bankAndBranch',
       type: 'string',
-      validation: (rule: Rule) => rule.required()
-    },
-    {
-      name: 'qrCodeImage',
-      type: 'image',
-      options: {
-        hotspot: true
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text'
-        }
-      ],
       validation: (rule: Rule) => rule.required()
     }
   ]
