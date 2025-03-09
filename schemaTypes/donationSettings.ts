@@ -55,6 +55,21 @@ export default {
       name: 'bankAndBranch',
       type: 'string',
       validation: (rule: Rule) => rule.required()
-    }
+    },
+    {
+      name: 'isSection80GEnabled',
+      type: 'boolean',
+      validation: (rule: Rule) => rule.required()
+    },
+    {
+      name: 'section80GNumber',
+      type: 'string',
+      validation: (rule: Rule) => rule.required()
+    },
+    {
+      name: 'taxDeductionPercentage',
+      type: 'number',
+      validation: (rule: Rule) => rule.required()
+    }, 
   ]
 } 
