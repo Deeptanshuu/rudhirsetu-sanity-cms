@@ -39,9 +39,42 @@ export default {
     },
     {
       name: 'image',
+      title: 'Card Image',
+      description: 'This image will be used as the main card/thumbnail image',
       type: 'image',
       options: {
         hotspot: true
+      }
+    },
+    {
+      name: 'gallery',
+      title: 'Event Gallery',
+      description: 'Add multiple images for the event gallery',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true
+          },
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative Text',
+              description: 'Important for SEO and accessibility'
+            },
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              description: 'Optional caption for the image'
+            }
+          ]
+        }
+      ],
+      options: {
+        layout: 'grid'
       }
     }
   ]
